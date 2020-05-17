@@ -1,0 +1,319 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+
+
+
+body {
+    background: rgb(2,0,36);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background-image: linear-gradient(135deg, #0042D9 0%, #0093FF 60%, #0078FF 100%);
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+   
+    
+    
+}
+
+nav {
+    border: solid darkgreen 2px;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px; 
+    padding-right: 20px;
+    margin-bottom: 200px;
+    margin-top: 0px;
+    
+    
+    
+}
+
+.controls {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#highScore {
+    background-color: bisque;
+}
+
+#highScore > h1 {
+    color: black;
+}
+
+#container {
+    margin: auto;
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+#myBtn {
+	cursor: pointer;
+	position: relative;
+	padding: 5px;
+	border-radius: 3.75rem;
+	line-height: 2.5rem;
+	font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	
+	border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+#myBtn h1 {
+	color: transparent;
+	background-image: linear-gradient(0deg, #EE82DA 0%, #FEFAFD 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+#myBtn::before {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	opacity: 0.7;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+#myBtn::after {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	bottom: 0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.btn {
+    background-color: coral;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    border-color: yellowgreen;
+}
+
+#correctConfirm {
+    
+    padding: 5px 10px;
+    color: blueviolet;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+
+#timerDiv {
+    padding: 5px;
+	border-radius: 3.75rem;
+	line-height: 2.5rem;
+	font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	
+	border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+
+#timerDiv h1 {
+    color: transparent;
+	background-image: linear-gradient(0deg, #EE82DA 0%, #FEFAFD 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+#question {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.correctClass {
+    background-color: green;
+}
+
+.incorrectClass {
+    background-color: red;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal h1 {
+      text-align: center;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ .finalBtn:link,
+ .finalBtn:visited{
+  text-decoration: none;
+  text-transform:uppercase;
+  position:relative;
+  top:0;
+  left:0;
+  padding:20px 40px;
+  border-radius:100px;
+  display:inline-block;
+  transition: all .5s;
+}
+
+  .finalBtnWhite {
+    background: lightblue;
+    color:#000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .finalBtn:hover{
+     box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+     transform : translateY(-3px);
+  }
+  
+  .finalBtn:active {
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2)
+    
+  }
+
+  
+  
+  
+  .Finalbtn-bottom-animation-1{
+    animation:comeFromBottom 1s ease-out .8s;
+  }
+  
+  .Finalbtn::after{
+    content:"";
+    text-decoration: none;
+    text-transform:uppercase;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius:100px;
+    display:inline-block;
+    z-index:-1;
+    transition: all .5s;
+  }
+  
+  .Finalbtn-white::after {
+      background: #fff;
+  }
+  
+  .Finalbtn-animation-1:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      margin-bottom: 100px;
+    }
+
+    #myBtn {
+      font-size: 10px;
+    }
+
+    #timerDiv {
+      font-size: 9px;
+    }
+  }
+
+  #name {
+    margin-bottom: 10px;
+  }
+
+
