@@ -1,6 +1,6 @@
-# bootcamp_homework week 4
+# Code Quiz
 
-## Code Quiz
+## bootcamp_homework week 4
 
 In this project, I was tasked with creating a timed code quiz with multiple-choice questions. The app runs in the browser and features dynamically updating HTML and CSS powered by a JavaScipt file. The application is responsive to different screen sizes.
 
