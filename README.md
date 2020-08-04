@@ -4,6 +4,8 @@
 
 In this project, I was tasked with creating a timed code quiz with multiple-choice questions. The app runs in the browser and features dynamically updating HTML and CSS powered by a JavaScipt file. The application is responsive to different screen sizes.
 
+A link to the deployed application can be found at https://phillidp1989.github.io/bootcamp_homework/week4/.
+
 ## Brief
 
 The app features a starting screen, a series of questions which are randomly looped through and a page in which the user can enter their name to be added to the list of high scorers, details of which are stored to local storage.
